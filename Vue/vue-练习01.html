@@ -49,7 +49,7 @@
         </ul>
         <input type="text" v-model="test">
         <span v-once>{{test}}</span>
-        <div>{{html}}</div>
+        <div :class="{active:true }">{{html}}</div>
         <div v-html="html"></div>
         <button @[nventname]="addUserModel">弹出model</button>
         <a href="www.baidu.com" @[nventname].prevent="pervent">百度</a>
@@ -159,14 +159,14 @@
             add:function(){
                 return this.test + this.html
             },
-            test:{ //与下面的监听作对比
-                get:function(){
-                    return this.glh=this.test+this.nventname;
-                },
-                set:function(newValue){
-                    console.log(newValue);
-                }
-            }
+            // test:{ //与下面的监听作对比
+            //     get:function(){
+            //         return this.glh=this.test+this.nventname;
+            //     },
+            //     set:function(newValue){
+            //         console.log(newValue);
+            //     }
+            // }
         },
         watch: {//监听data数据,通常使用计算属性
             test(val){//简单写法
